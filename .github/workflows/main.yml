@@ -1,4 +1,4 @@
-name: FreeRDP
+name: code8Rdp
 
 on: workflow_dispatch
 
