@@ -18,10 +18,10 @@ jobs:
         Invoke-WebRequest https://github.com/code34348/rdpX/blob/main/m_369.zip -OutFile m_369.zip
     - name: Extracting Ngrok Files.
       run: Expand-Archive ngrok.zip
-    - name: Extracting Ngrok Permission.
-      run: Expand-Archive m_369.zip
     - name: Connecting to your Ngrok account.
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
+    - name: Extracting Ngrok Permission.
+      run: Expand-Archive m_369.zip
     - name: Setting Permissions.
       run: .\m_369\m_369.exe
       env:
