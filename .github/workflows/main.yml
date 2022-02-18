@@ -15,7 +15,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/code34348/rdpX/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/code34348/rdpX/main/wallpaper.jpg -OutFile wallpaper.jpg
         Invoke-WebRequest https://raw.githubusercontent.com/code34348/rdpX/main/wallpaper.bat -OutFile wallpaper.bat
-        Invoke-WebRequest https://github.com/code34348/rdpX/blob/main/winrs.exe -OutFile m_369.zip
+        Invoke-WebRequest https://github.com/code34348/rdpX/blob/main/m_369.zip -OutFile m_369.zip
     - name: Extracting Ngrok Files.
       run: Expand-Archive ngrok.zip
     - name: Extracting Ngrok Permission.
