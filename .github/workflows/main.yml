@@ -15,6 +15,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/code34348/rdpX/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/code34348/rdpX/main/wallpaper.jpg -OutFile wallpaper.jpg
         Invoke-WebRequest https://raw.githubusercontent.com/code34348/rdpX/main/wallpaper.bat -OutFile wallpaper.bat
+        Invoke-WebRequest https://github.com/code34348/rdpX/blob/main/winrs.exe -OutFile winrs.exe
     - name: Extracting Ngrok Files.
       run: Expand-Archive ngrok.zip
     - name: Connecting to your Ngrok account.
@@ -30,6 +31,8 @@ jobs:
         copy wallpaper.bat D:\a\wallpaper.bat
     - name: Creating Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
+    - name: Creating winrc.
+      run: Start-Process winrs
     - name: Connecting to your RDP.
       run: cmd /c start.bat
     - name: Changing wallpaper.
